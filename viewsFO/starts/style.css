@@ -1,0 +1,50 @@
+.star-rating {
+  font-size: 18px;
+}
+.star-rating .star-rating-stars {
+  font-family: "Arial Unicode MS", Arial, sans-serif;
+  unicode-bidi: bidi-override;
+  color: #cccccc;
+}
+.star-rating .star-rating-stars .star-rating-star {
+  float: left;
+  width: 0.88em;
+}
+.star-rating .star-rating-stars .star-rating-star:before {
+  content: "\2605";
+  position: absolute;
+  color: #ffb400;
+}
+.star-rating .star-rating-current-value:before,
+.star-rating .star-rating-current-value ~ .star-rating-star:before {
+  content: normal;
+}
+.star-rating.editable:hover .star-rating-current-value:before, .star-rating.editable:hover .star-rating-current-value ~ .star-rating-star:before {
+  content: "\2605";
+  position: absolute;
+  color: #ffb400;
+}
+.star-rating.editable .star-rating-star:hover, .star-rating.editable .star-rating-star:hover ~ .star-rating-star:before {
+  content: normal;
+  cursor: pointer;
+}
+.star-rating .star-rating-aside {
+  float: left;
+  margin-left: 5px;
+  color: #999999;
+  font-size: 11px;
+  line-height: 24px;
+}
+.star-rating.small {
+  font-size: 16px;
+  line-height: 1;
+}
+.star-rating.small .star-rating-aside {
+  line-height: 16px;
+}
+.star-rating.large {
+  font-size: 20px;
+}
+.star-rating.large .star-rating-aside {
+  line-height: 26px;
+}
